@@ -1,4 +1,4 @@
 *
 
-!.gitignore
-!*/zad1/*
+!*/
+!zad1/**
