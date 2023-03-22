@@ -8,6 +8,7 @@
 
     --small-font-size: 1rem;
     --small-radius: 0.5rem;
+    --big-radius: 1rem;
 }
 
 .navbar {
@@ -61,4 +62,60 @@ button {
 
 button:hover {
     background-color: var(--dark-orange);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    /* margin: 0px 6rem; */
+    /* column-gap: 20px; */
+}
+
+.hero-section {
+    height: 100vh;
+    padding-top: 6.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6.25rem 15.5rem;
+}
+
+.hero-form {
+    width: 35rem;
+    padding: 17.375rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-form-title {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    background-image: url("./assets/dots hero section.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: left center;
+}
+
+.hero-image {
+    height: 85vh;
+    margin-top: 2rem;
+    border-radius: var(--big-radius);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    align-self: center;
+    color: var(--light-black);
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2rem;
+    align-self: center;
+    color: var(--light-black);
 }
