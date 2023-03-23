@@ -1,0 +1,87 @@
+.hero-section {
+    height: 100vh;
+    padding-top: 6.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6.25rem 15.5rem;
+}
+
+.hero-form {
+    width: 35rem;
+    padding: 11.175rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.125rem;
+}
+
+.hero-form-title {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    background-image: url("../assets/dots hero section.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: left center;
+}
+
+.hero-image {
+    height: 85vh;
+    margin-top: 2rem;
+    border-radius: var(--big-radius);
+}
+
+.title {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 3rem;
+    align-self: center;
+    color: var(--light-black);
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2rem;
+    align-self: center;
+    color: var(--light-black);
+}
+
+.hero-form-inputs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+    row-gap: 1.5rem;
+}
+
+.hero-form-inputs p {
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
+input {
+    border: 1px solid var(--light-blue);
+    border-radius: 0.5rem;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+}
+
+.hero-form-underneath {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* line-height: 3rem; */
+}
+
+.hero-form-underneath div {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 0.5rem;
+}
