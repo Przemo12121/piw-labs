@@ -4,6 +4,7 @@
     --white: #ffffff;
     --light-black: #3B3B3B;
     --primary-orange: #FFC044;
+    --light-orange: #FFF8E4;
     --dark-orange: #6C4801;
     --light-blue: #98A9FF;
 
@@ -78,4 +79,20 @@ button:hover {
 
 .clickable:hover {
     cursor: pointer
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 3rem;
+  align-self: center;
+  color: var(--light-black);
+}
+
+.subtitle {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 2rem;
+  align-self: center;
+  color: var(--light-black);
 }
