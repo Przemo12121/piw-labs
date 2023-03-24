@@ -22,18 +22,18 @@
     padding: 3.5rem 1.5rem;
     background-image: url("../assets/dots\ about\ section.svg");
     background-repeat: no-repeat;
-    background-size: 50%;
+    background-size: 40%;
     background-position: right center;
 }
 
 .about-card {
     border-radius: var(--small-radius);
     background-color: var(--white);
-    width: 49rem;
+    /* width: 49.125rem; */
     /* height: 13.25rem; */
-    padding: 3.25rem 2.25rem;
+    padding: 1.25rem 2.25rem 3.25rem 2.25rem;
     display: flex;
-    gap: 2.5rem;
+    gap: 0.5rem;
     flex-direction: column;
     align-items: center;
 }
@@ -47,7 +47,7 @@
 
 .about-card-title {
     font-size: 1.125rem;
-    /* line-height: 3rem; */
+    line-height: 4rem;
     font-weight: 700;
     color: var(--dark-orange);
 }
