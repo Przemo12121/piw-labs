@@ -23,7 +23,16 @@
   gap: 1.5rem;
 }
 
+.contact-images p {
+  font-size: 1rem;
+}
+
+.contact-images i {
+  font-size: 1.5rem;
+}
+
 .contact-images img {
+  object-fit: cover;
   height: 26rem;
   width: 26rem;
   border-radius: var(--medium-radius);
