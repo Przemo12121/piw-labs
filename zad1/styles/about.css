@@ -1,6 +1,6 @@
 .about-section {
-    padding: 12.5rem 6.25rem;
-    height: 100vh;
+    padding: 12.5rem 6.25rem 8.125rem 6.25rem;
+    /* height: 100vh; */
     display: flex;
     align-items: center;
     flex-direction: column;

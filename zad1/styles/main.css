@@ -11,6 +11,7 @@
     --small-font-size: 1rem;
     --small-radius: 0.25rem;
     --big-radius: 1rem;
+    --medium-radius: 0.5rem;
 }
 
 .navbar {
@@ -96,4 +97,16 @@ h3 {
   line-height: 2rem;
   align-self: center;
   color: var(--light-black);
+}
+
+.icon-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-icon {
+  color: var(--light-black);
+  font-size: 1rem;
 }
