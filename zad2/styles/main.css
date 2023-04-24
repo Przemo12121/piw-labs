@@ -1,0 +1,116 @@
+.main-layout {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    background-color: beige;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    width: 96vw;
+}
+
+.form-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 45vw;
+}
+
+#todo-list {
+    display: flex;
+    align-content: flex-start;
+    height: 94vh;
+    width: 45vw;
+    background-color: lightcoral;   
+    border-style: inset;
+    border-width: 0.25rem;
+    border-radius: 1.5rem;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+
+button {
+    width: 6rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+#todo-input {
+    width: 50rem;
+    font-size: 1.5rem;
+}
+
+.todo-item {
+    width: 14%;
+    min-height: 8rem;
+    height: fit-content;
+    background-color: plum;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1rem 0.5rem;
+    overflow-wrap: break-word;
+    cursor: pointer;
+}
+
+.completed {
+    background-color: gray;
+}
+
+.todo-item p {
+    padding: 0;
+    margin: 0;
+}
+
+.todo-item button {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: red;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    color: white;
+    text-align: center;
+    font-style: bold;
+    align-self: flex-start;
+    border-radius: 0.5rem;
+}
+
+.todo-item button:hover {
+    background-color: darkred;
+}
+
+.todo-item-title {
+    font-size: 1.5rem;
+}
+
+.todo-item-content {
+    font-size: 1.125rem;
+    width: 100%;
+}
+
+.todo-item-finished {
+    font-size: 1.5rem;
+    font-style: italic;
+    width: 100%;
+    color: purple;
+}
+
+.finished {
+    text-decoration: line-through;
+}
+
+.revert-button {
+    width: fit-content;
+}
+
+.inactive {
+    pointer-events: none;
+    background-color: gray;
+}
