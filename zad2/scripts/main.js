@@ -9,13 +9,13 @@ const todoItemTitleFinished = "todo-item-title finished";
 const todoItemContent = "todo-item-content";
 const todoItemContentFinished = "todo-item-content finished";
 const revertButton = "revert-button";
-const revertButtonInactive = "revert-button inactive";
+const inactive = "inactive";
 const todoItemFinished = "todo-item-finished";
 
 const stash = {
     index: -1,
     node: null
-}
+};
 
 function add() {
     const input = document.getElementById(todoInput);
@@ -26,9 +26,9 @@ function add() {
     const list = document.getElementById(todoList);
     const item = createItem(input.value, list.children.length);
     list.appendChild(item);
-} 
+};
 
-const createItem = (text, index) => {
+function createItem(text, index) {
     const finished = document.createElement("p");
     finished.className = todoItemFinished;
 
@@ -45,29 +45,24 @@ const createItem = (text, index) => {
     
     const button = document.createElement("button");
     button.textContent = "X";
-    button.onclick = () => {
-        const list = document.getElementById(todoList);
-        list.removeChild(div);
-
-        stash.index = index;
-        stash.node = div;
-
-        const button = document.getElementById(revertButton);
-        button.className = revertButton;
+    button.onclick = (event) => {
+        event.stopPropagation();
+        showModal(div, index);
     }
 
-    const complete = () => {
+    const complete = (event) => {
+        event.stopPropagation();
+
         div.className = todoItemCompleted;
         div.onclick = revertComplete;
         content.className = todoItemContentFinished;
         title.className = todoItemTitleFinished;
 
-        const now = new Date()
-
-        finished.textContent = `Finished at ${now.getDay()}-${now.getMonth()}-${now.getFullYear()} ${now.getHours()}:${now.getMinutes()}`;
         finished.textContent = `Finished at ${moment().format('DD.MM.YYYY HH:mm')}`;
     }
-    const revertComplete = () => {
+    const revertComplete = (event) => {
+        event.stopPropagation()
+
         div.className = todoItem;
         content.className = todoItemContent;
         title.className = todoItemTitle;
@@ -82,6 +77,23 @@ const createItem = (text, index) => {
     div.appendChild(finished);
 
     return div;
+};
+
+function showModal(div, index) {
+    $(`#modal`).css("display", "flex");
+    $(`#modal div button`).click(function () {
+        $(`#${todoList} div:eq(${index})`).remove();
+
+        stash.index = index;
+        stash.node = div;
+
+        $(`#${revertButton}`).removeClass(inactive);
+    });
+};
+
+function hideModal() {
+    $(`#modal`).css("display", "none");
+    $(`#modal div button`).unbind("click");
 }
 
 function revertRemoval() {
@@ -89,13 +101,15 @@ function revertRemoval() {
         return;
     }
 
-    const list = document.getElementById(todoList);
-    const button = document.getElementById(revertButton);
-    button.className = revertButtonInactive
+    const list = $(`#${todoList}`)[0]
+    $(`#${revertButton}`).addClass(inactive);
 
     if (list.childNodes[stash.index]) {
         list.childNodes[stash.index].after(stash.node);
     } else {
         list.appendChild(stash.node);
     }
-}
+
+    stash.index = -1;
+    stash.node = null;
+};
