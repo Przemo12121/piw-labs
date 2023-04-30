@@ -1,0 +1,112 @@
+[{
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Wrocław",
+    "street": "Szewska 3"
+  },
+  "residentialArea": 30,
+  "owner": "Jan Kowalski",
+  "pricePerMonth": 1200,
+  "sleepingRooms": 2,
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus tincidunt sapien, quis rutrum turpis dapibus in. Aenean iaculis fermentum ex, sit amet efficitur quam rutrum vel. Vivamus quis hendrerit orci. Vivamus eget metus ut eros consequat dapibus a in tellus. Duis suscipit erat eget nunc tincidunt varius. Fusce faucibus ex quis magna auctor, accumsan tempor lectus iaculis. In malesuada placerat tincidunt. Ut hendrerit ex eget fringilla rhoncus. Phasellus gravida mollis cursus. Curabitur eu libero non enim auctor semper. Morbi vestibulum ante ipsum, sed viverra libero pulvinar sed. Etiam auctor vehicula arcu, id consectetur sem lobortis vel. "
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Wrocław",
+    "street": "Gen. Kazimierza Pułaskiego 10"
+  },
+  "residentialArea": 52,
+  "owner": "Matylda Makowska",
+  "pricePerMonth": 2700,
+  "sleepingRooms": 1,
+  "description": "Proin quis suscipit nulla. Curabitur nunc magna, ullamcorper at diam nec, pellentesque consectetur neque. Etiam rutrum faucibus aliquam. Nullam tortor est, congue et mattis id, ultrices eget arcu. Proin dolor massa, tempus eu urna sed, elementum ultrices mauris. Quisque commodo pellentesque magna, non aliquet urna tristique eget. Mauris dui sapien, luctus at tincidunt ut, ullamcorper vel nisl. Quisque ante risus, luctus ullamcorper dapibus eget, convallis vel lacus. Etiam urna mauris, ultricies eget vestibulum eget, hendrerit vel purus. Maecenas vehicula sapien quis augue sollicitudin feugiat. Duis rhoncus leo interdum mauris dignissim varius. Morbi aliquam dolor sit amet orci fermentum pulvinar. Duis aliquet, risus non tincidunt scelerisque, odio eros mattis enim, nec lacinia metus augue eget purus."
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Wrocław",
+    "street": "Legnicka 51"
+  },
+  "residentialArea": 56,
+  "owner": "Wanda Wysocka",
+  "pricePerMonth": 1500,
+  "sleepingRooms": 1,
+  "description": "Morbi in sem pulvinar, maximus quam et, interdum felis. Etiam sem risus, luctus eget malesuada et, imperdiet ac urna. Duis ornare turpis non justo laoreet, vitae rhoncus neque elementum. Ut suscipit elit at facilisis fermentum. Nam placerat arcu metus, nec volutpat diam bibendum id. In quis velit interdum, sagittis urna non, porta justo. Maecenas vel dapibus augue, sed gravida eros. Maecenas finibus in nisl sed pharetra."
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Brzeg",
+    "street": "Kardynała Wyszyńskiego 10"
+  },
+  "residentialArea": 64,
+  "owner": "Igor Stępień",
+  "pricePerMonth": 1200,
+  "sleepingRooms": 1,
+  "description": "Donec lorem erat, ultrices sed urna ut, feugiat accumsan enim. In eget libero velit. Mauris faucibus cursus ex. Etiam eu feugiat enim, vel fringilla elit. Sed varius, ante vel viverra interdum, velit lectus suscipit neque, quis ultrices dui mauris eget tortor. Duis ullamcorper at augue non auctor. Maecenas lacus justo, egestas nec condimentum vitae, bibendum sit amet lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Quisque et tristique mi. Vivamus egestas ornare pellentesque. Fusce hendrerit leo id lorem sollicitudin placerat. "
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Wrocław",
+    "street": "Trzech Kotwic 3"
+  },
+  "residentialArea": 60,
+  "owner": "Alicja Laskowska",
+  "pricePerMonth": 23000,
+  "sleepingRooms": 2,
+  "description": "Morbi porttitor massa et nunc suscipit, nec tincidunt nulla lacinia. Curabitur aliquet volutpat tortor. Cras in felis nulla. Proin ac sapien ac eros porttitor rhoncus. Aenean facilisis venenatis orci, a scelerisque mauris cursus eu. Mauris sit amet quam faucibus ex iaculis vestibulum. Curabitur placerat mauris magna, in laoreet arcu maximus ut. Mauris et lectus ac libero tristique elementum a vel nibh. Vestibulum nibh odio, tristique ac maximus ac, ultrices non tellus. Ut consequat aliquet arcu, in rutrum quam sagittis ultrices. Nulla vel nibh ultrices, congue erat vestibulum, sollicitudin neque. "
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Wrocław",
+    "street": "Wolności 14"
+  },
+  "residentialArea": 40,
+  "owner": "Mirosław Błaszczyk",
+  "pricePerMonth": 1200,
+  "sleepingRooms": 1,
+  "description": "Pellentesque at felis pellentesque nibh facilisis mollis. Cras ultrices pretium augue, sed molestie justo tristique tincidunt. Quisque at arcu quam. Nunc tincidunt dolor et aliquet fermentum. Sed laoreet molestie vulputate. Nulla laoreet, justo et pellentesque maximus, nulla eros consequat velit, tincidunt interdum mauris leo vitae libero. Fusce rhoncus sed quam at gravida. Sed sodales sapien et varius commodo. Sed sodales sem leo, eu rutrum lorem semper sit amet. Aenean accumsan quis odio vel sagittis. Donec sagittis, ipsum ut maximus mattis, sapien massa pretium ante, at porta urna nibh a mi. Fusce non auctor ex. Pellentesque eu elit vestibulum, pulvinar nibh eget, ultricies lorem. In egestas, dui vitae aliquam tincidunt, orci metus cursus augue, nec tristique libero orci vitae enim. "
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Wrocław",
+    "street": "Opole"
+  },
+  "residentialArea": 35,
+  "owner": "Julian Wiśniewski",
+  "pricePerMonth": 1600,
+  "sleepingRooms": 1,
+  "description": "Sed a mauris ut augue malesuada fermentum in sed dolor. Nullam id ultricies orci. Donec faucibus lacus vitae enim mattis, a malesuada urna rutrum. Maecenas id interdum nisl. Fusce pretium elit nec lacus tincidunt elementum. Maecenas vitae pretium ante. Integer volutpat sem non mauris lobortis maximus. Suspendisse in mi sit amet nunc euismod ornare. "
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Opole",
+    "street": "1 Maja 50"
+  },
+  "residentialArea": 52,
+  "owner": "Jarosław Woźniak",
+  "pricePerMonth": 1200,
+  "sleepingRooms": 2,
+  "description": "Pellentesque eget nisl nibh. Sed at convallis felis. In sed tellus dictum urna suscipit convallis nec vel neque. Phasellus at sodales ligula. Suspendisse luctus vehicula gravida. Fusce vulputate ullamcorper neque eget tincidunt. Phasellus at ultrices turpis. Ut accumsan sed elit eget euismod."
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Opole",
+    "street": "Ozimska 48"
+  },
+  "residentialArea": 83,
+  "owner": "Arkadiusz Piotrowski",
+  "pricePerMonth": 2100,
+  "sleepingRooms": 1,
+  "description": "Etiam mattis urna a nulla lobortis accumsan. Ut vel urna eget felis ultrices porta ut ut enim. Maecenas tristique felis ac sapien porta finibus. Aliquam pretium eu mauris in varius. Integer non nisl nec nulla accumsan bibendum id vel velit. Sed gravida scelerisque mi non ultricies. Maecenas malesuada, risus vitae laoreet vulputate, turpis mi rutrum nisi, ut dapibus dui est vel leo. Aenean vestibulum lacinia ante, sit amet pellentesque tortor egestas a. Phasellus mauris elit, bibendum sodales lectus vitae, eleifend dignissim enim. Sed sed ligula nec metus faucibus feugiat. Vivamus finibus, nulla non ullamcorper blandit, elit risus tristique nibh, quis euismod ex urna at sem. Proin ac enim molestie, sodales ex at, fringilla lorem. Proin aliquam elit vitae placerat vulputate. Pellentesque fermentum sed tellus nec fringilla."
+}, {
+  "image": "photos/house.jpg",
+  "address": {
+    "city": "Poznań",
+    "street": "Zamenhofa 7",
+    "sleepingRooms": 2
+  },
+  "residentialArea": 27,
+  "owner": "Maja Kamińska",
+  "pricePerMonth": 900,
+  "sleepingRooms": 1,
+  "description": "Mauris mattis turpis non mi euismod, id condimentum urna fermentum. Duis non odio bibendum, dictum ligula sit amet, egestas augue. In ac luctus dolor. Ut hendrerit ipsum a velit accumsan, id consectetur augue facilisis. Nulla tempor purus suscipit tempor porta. Cras luctus aliquam nisl a hendrerit. Sed id nisi ut velit porta iaculis. "
+}]
