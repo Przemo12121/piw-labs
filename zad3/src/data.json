@@ -68,7 +68,7 @@
   "image": "photos/house.jpg",
   "address": {
     "city": "Wrocław",
-    "street": "Opole"
+    "street": "Grudziąńska 12"
   },
   "residentialArea": 35,
   "owner": "Julian Wiśniewski",
@@ -101,8 +101,7 @@
   "image": "photos/house.jpg",
   "address": {
     "city": "Poznań",
-    "street": "Zamenhofa 7",
-    "sleepingRooms": 2
+    "street": "Zamenhofa 7"
   },
   "residentialArea": 27,
   "owner": "Maja Kamińska",

@@ -1,28 +1,35 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import data from "./data.json";
+import Header from "./components/Header";
+import DarkmodeButtons from "./components/DarkmodeButtons";
+import Inputs from "./components/Inputs";
+import OrderButtons from "./components/OrderButtons";
+import AdList from "./components/AdList";
 
 function App() {
   const [citySearch, setCitySearch] = useState("");
   const [roomsSearch, setRoomsSearch] = useState("");
   const [descriptionSearch, setDescriptionSearch] = useState("");
   const [ads, setAds] = useState(data);
+  const [ascending, setAscending] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   const filter = () => {
     let filtered = data;
 
     if (citySearch) {
-      filtered = data.filter(
+      filtered = filtered.filter(
         ad => ad.address.city.toLowerCase().includes(citySearch.toLowerCase())
       );
     }
     if (descriptionSearch) {
-      filtered = data.filter(
+      filtered = filtered.filter(
         ad => ad.description.toLowerCase().includes(descriptionSearch.toLowerCase())
       );
     }
     if (roomsSearch) {
-      filtered = data.filter(
+      filtered = filtered.filter(
         ad => ad.sleepingRooms === Number.parseInt(roomsSearch)
       );
     }
@@ -30,53 +37,28 @@ function App() {
     setAds(filtered);
   }
 
-  const adHolders = useMemo(
-    () => ads.map(ad => 
-      <div className="ad">
-        <div className="ad-text">
-          <p>{ad.address.city}, {ad.address.street}</p>
-          <p>{ad.description}</p>
-          <p className="ad-footer">
-            price: <b>{ad.pricePerMonth}</b>, owner: <b>{ad.owner}</b>, params: {ad.residentialArea}m2, {ad.sleepingRooms} sleeping rooms
-          </p>
-        </div>
-
-        <img src={ad.image} alt={ad.image}/>
-      </div>
-    ), 
-    [ads]
-  )
+  document.body.style.backgroundColor = darkMode ? "#4d4d4d" : "wheat";
 
   return (
     <div className="App">
-      <div>
-        <h1>Rent-a-house</h1>
-        <h2>by: Przemysław Małecki</h2>
-      </div>
+      <Header darkMode={darkMode} />
       
-      <div className="input-container">
-        <span>
-          City: <input placeholder="search" onChange={(e) => setCitySearch(e.target.value)} />
-        </span>
-        <span>
-          Sleep rooms: <input placeholder="search" onChange={(e) => setRoomsSearch(e.target.value)} />
-        </span>
-        <span>
-          Description: <input placeholder="search" onChange={(e) => setDescriptionSearch(e.target.value)} />
-        </span>
+      <DarkmodeButtons darkMode={darkMode} setDarkMode={setDarkMode} />
 
-        <button onClick={filter}>Search</button>
-      </div>
+      <Inputs
+        darkMode={darkMode}
+        citySearch={citySearch} 
+        roomsSearch={roomsSearch} 
+        descriptionSearch={descriptionSearch} 
+        setCitySearch={setCitySearch}
+        setRoomsSearch={setRoomsSearch}
+        setDescriptionSearch={setDescriptionSearch}
+        filter={filter}
+      />
 
-      <div className="input-container">
-        Order by price:
-        <button>ascending</button>
-        <button>descending</button>
-      </div>
+      <OrderButtons darkMode={darkMode} setAscending={setAscending} ascending={ascending} />
       
-      <div className="ad-container">
-        {adHolders}
-      </div>
+      <AdList ads={ads} darkMode={darkMode} ascending={ascending} />
     </div>
   );
 }
