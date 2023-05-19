@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import { Account } from "../types";
 import UserContext from "../context/UserContext";
+import { useLocalStorage } from '../hooks/useLocalStorage';
 
 type Props = {
     onLogin: (user: Account) => void
@@ -11,10 +12,12 @@ type Props = {
 }
 
 function PageRouter(props: Props) {
-    const user = useContext(UserContext)
+    const user = useContext(UserContext);
+    const storage = useLocalStorage();
 
+    // ponizej podwojne sprawdzenie, zeby pokazac skutecznosc obu mechanizmow
     return (
-        user ? <Home onLogout={props.onLogout}/> : <Login onLogin={props.onLogin}/>
+        user && storage.read() ? <Home onLogout={props.onLogout}/> : <Login onLogin={props.onLogin}/>
     );
 }
 

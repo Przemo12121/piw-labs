@@ -3,15 +3,27 @@ import "./App.css";
 import { Account } from "./types";
 import UserContext from "./context/UserContext";
 import PageRouter from "./pages/PageRouter";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 function App() {
-    const [user, setUser] = useState<Account | null>(null)
+    const storage = useLocalStorage();
+    const [user, setUser] = useState<Account | null>(null);
+
+    useEffect(() => {
+        setUser(storage.read());
+    }, []);
 
     return (
         <UserContext.Provider value={user}>
             <PageRouter 
-                onLogin={(user) => setUser(user)}
-                onLogout={() => setUser(null)}
+                onLogin={(user) => {
+                    storage.save(user);
+                    setUser(user);
+                }}
+                onLogout={() => {
+                    storage.clear();
+                    setUser(null);
+                }}
             />
         </UserContext.Provider>
     );

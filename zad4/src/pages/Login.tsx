@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { login } from "../login";
 import { Account } from "../types";
 
@@ -11,9 +11,9 @@ function Login(props: Props) {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [isError, setIsError] = useState(false)
+    const [isError, setIsError] = useState(false);
 
-    const handleClick = async () => {
+    const handleClick = useCallback(async () => {
         const account = await login({
             email: email,
             password: password
@@ -24,9 +24,9 @@ function Login(props: Props) {
         } else {
             setIsError(true)
         }
-    }
+    }, [email, password, props]);
 
-    useEffect(() => setIsError(false), [email, password])
+    useEffect(() => setIsError(false), [email, password]);
 
     return (
         <div className="sign-in-main">
@@ -44,4 +44,4 @@ function Login(props: Props) {
     );
 }
 
-export default Login
+export default Login;
