@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState } from 'react';
 import "../App.css";
 import Header from "../components/Header";
 import DarkmodeButtons from "../components/DarkmodeButtons";
@@ -20,23 +20,23 @@ function Home(props: Props) {
     const [ascending, setAscending] = useState(true);
     const [darkMode, setDarkMode] = useState(false);
 
-    const filter = () => {
-        let filtered = ads;
+    const filter = async () => {
+        let filtered = await fetchedAds;
 
         if (citySearch) {
-        filtered = filtered.filter(
-            ad => ad.address.city.toLowerCase().includes(citySearch.toLowerCase())
-        );
+            filtered = filtered.filter(
+                ad => ad.address.city.toLowerCase().includes(citySearch.toLowerCase())
+            );
         }
         if (descriptionSearch) {
-        filtered = filtered.filter(
-            ad => ad.description.toLowerCase().includes(descriptionSearch.toLowerCase())
-        );
+            filtered = filtered.filter(
+                ad => ad.description.toLowerCase().includes(descriptionSearch.toLowerCase())
+            );
         }
         if (roomsSearch) {
-        filtered = filtered.filter(
-            ad => ad.sleepingRooms === Number.parseInt(roomsSearch)
-        );
+            filtered = filtered.filter(
+                ad => ad.sleepingRooms === Number.parseInt(roomsSearch)
+            );
         }
 
         setAds(filtered);
@@ -51,24 +51,24 @@ function Home(props: Props) {
 
     return (
         <div className="App">
-        <Header darkMode={darkMode} onLogout={props.onLogout}/>
-        
-        <DarkmodeButtons darkMode={darkMode} setDarkMode={setDarkMode} />
+            <Header darkMode={darkMode} onLogout={props.onLogout}/>
+            
+            <DarkmodeButtons darkMode={darkMode} setDarkMode={setDarkMode} />
 
-        <Inputs
-            darkMode={darkMode}
-            citySearch={citySearch} 
-            roomsSearch={roomsSearch} 
-            descriptionSearch={descriptionSearch} 
-            setCitySearch={setCitySearch}
-            setRoomsSearch={setRoomsSearch}
-            setDescriptionSearch={setDescriptionSearch}
-            filter={filter}
-        />
+            <Inputs
+                darkMode={darkMode}
+                citySearch={citySearch} 
+                roomsSearch={roomsSearch} 
+                descriptionSearch={descriptionSearch} 
+                setCitySearch={setCitySearch}
+                setRoomsSearch={setRoomsSearch}
+                setDescriptionSearch={setDescriptionSearch}
+                filter={filter}
+            />
 
-        <OrderButtons darkMode={darkMode} setAscending={setAscending} ascending={ascending} />
-        
-        <AdList ads={ads} darkMode={darkMode} ascending={ascending} />
+            <OrderButtons darkMode={darkMode} setAscending={setAscending} ascending={ascending} />
+            
+            <AdList ads={ads} darkMode={darkMode} ascending={ascending} />
         </div>
     );
 }

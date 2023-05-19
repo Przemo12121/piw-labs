@@ -11,7 +11,7 @@ type Props = {
 function AdList(props: Props) {
     const adHolders = useMemo(
         () => props.ads.sort(
-          (a, b) => props.ascending ? a.pricePerMonth - b.pricePerMonth : b.pricePerMonth - a.pricePerMonth
+          (a, b) => props.ascending ? b.pricePerMonth - a.pricePerMonth : a.pricePerMonth - b.pricePerMonth
         ).map(ad => <AdHolder ad={ad} darkMode={props.darkMode} />), 
         [props]
     );

@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useMemo } from 'react';
 import "../App.css";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -15,9 +15,11 @@ function PageRouter(props: Props) {
     const user = useContext(UserContext);
     const storage = useLocalStorage();
 
+    const isLoggedIn = useMemo(() => user && storage.read(), [user, storage]);
+
     // ponizej podwojne sprawdzenie, zeby pokazac skutecznosc obu mechanizmow
     return (
-        user && storage.read() ? <Home onLogout={props.onLogout}/> : <Login onLogin={props.onLogin}/>
+        isLoggedIn ? <Home onLogout={props.onLogout}/> : <Login onLogin={props.onLogin}/>
     );
 }
 
