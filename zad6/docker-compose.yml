@@ -1,4 +1,4 @@
-version: "3.3"
+version: "3.9"
 
 services:
   
@@ -9,6 +9,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: mongoadmin
       MONGO_INITDB_ROOT_PASSWORD: testPWD123
+    volumes:
+      - "./db:/data/db"
     healthcheck:
       test: echo 'db.runCommand({serverStatus:1}).ok' | mongo admin -u mongoadmin -p testPWD123 --quiet | grep 1
       interval: 3s
