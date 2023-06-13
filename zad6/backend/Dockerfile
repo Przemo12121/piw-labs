@@ -6,4 +6,4 @@ RUN pip install -r ./requirements.txt
 
 EXPOSE 5000
 
-ENTRYPOINT MONGO_INITDB_ROOT_PASSWORD=testPWD123 python3 app.py
+ENTRYPOINT ["python3", "app.py"]
