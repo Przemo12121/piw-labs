@@ -1,14 +1,14 @@
 version: "3.3"
 
 services:
-  frontend:
-    container_name: frontend
-    build: 
-      context: frontend
+  mongodb:
+    container_name: database
+    image: mongo
     restart: unless-stopped
-    ports:
-      - "3000:3000"
-
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongoadmin
+      MONGO_INITDB_ROOT_PASSWORD: testPWD123
+  
   backend:
     container_name: backend
     build:
@@ -18,3 +18,11 @@ services:
       - "5000:5000"
     build:
       context: backend
+
+  frontend:
+    container_name: frontend
+    build: 
+      context: frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
